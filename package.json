@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon --exec tsx src/index.ts",
     "build": "tsc",
-    "start": "tsx src/index.ts",
+    "start": "npx tsx src/index.ts",
     "seed:questions": "tsx src/scripts/seed-questions.ts"
   },
   "dependencies": {
