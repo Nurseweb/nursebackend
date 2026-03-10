@@ -2,10 +2,10 @@
   "name": "nursebackend",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "scripts": {
+   "scripts": {
     "dev": "nodemon --exec tsx src/index.ts",
-    "build": "tsc",
-    "start": "npx tsx src/index.ts",
+    "build": "npm install && npx tsc",
+    "start": "node dist/index.js",
     "seed:questions": "tsx src/scripts/seed-questions.ts"
   },
   "dependencies": {
