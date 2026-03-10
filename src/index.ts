@@ -13,7 +13,12 @@ const app = express()
 const PORT = process.env.PORT ?? 5000
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://nurseweb.vercel.app",      // ← таны Vercel URL
+    "https://nurse-web.vercel.app",     // ← эсвэл ийм байж болно
+  ],
   credentials: true,
 }))
 app.use(express.json())
