@@ -25,6 +25,3 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
-
-# PDF files (хэрэв public/pdfs доторх файлуудыг track хийхгүй бол)
-public/pdfs/
