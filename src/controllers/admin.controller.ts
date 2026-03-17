@@ -62,6 +62,7 @@ export async function createUser(req: Request, res: Response) {
     return res.status(400).json({ message: "Бүх талбарыг бөглөнө үү." })
   }
   try {
+    console.log("📥 Create user body:", req.body)
     const existing = await pool.query(
       `SELECT id FROM users WHERE (email = $1 OR phone = $2) AND deleted_at IS NULL`,
       [email, phone]
@@ -78,6 +79,7 @@ export async function createUser(req: Request, res: Response) {
     )
     return res.status(201).json({ message: "Хэрэглэгч үүслээ.", user: rows[0] })
   } catch (err) {
+    console.error("❌ Create user error:", err.message)
     return res.status(500).json({ message: "Серверийн алдаа гарлаа." })
   }
 }
